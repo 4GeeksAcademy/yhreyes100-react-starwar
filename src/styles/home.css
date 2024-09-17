@@ -1,0 +1,22 @@
+.card{
+    width: 18rem;
+    margin-top: 5px;
+    margin-left: 30px;
+}
+.card-img-top{
+    width: 280px;
+    height: 150px;
+    background-color: grey;
+    margin-left: 3px;
+    margin-top: 3px;
+}
+.scroll{
+    height: 800px;
+}
+.scr{
+    margin-top: 80px;
+}
+h1{
+    color: red;
+    margin-left: 25px;
+}
