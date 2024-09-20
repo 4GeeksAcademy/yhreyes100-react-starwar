@@ -1,33 +1,9 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import "../../styles/home.css";
-
-export const Home = () => {
-	const apiUrl="https://www.swapi.tech/api/";
-	const [people,setPeople]=useState([]);
-	const [planets,setPlanets]=useState([]);
-	useEffect(()=>{
-		function getPeople(){
-			fetch(apiUrl+"people/")
-			.then(res => res.json())
-			.then(data => {
-				setPeople(data.results);
-				console.log(data.results)
-			})
-			.catch(err => console.error(err))
-		}
-		function getPlanets(){
-			fetch(apiUrl+"planets/")
-			.then(res => res.json())
-			.then(data => {
-				setPlanets(data.results)
-				console.log(data.results)
-			})
-			.catch(err => console.error(err))
-		}
-		getPeople();
-		getPlanets();
-	},[]);
+import {contextdata} from "../../js/layout";
+export const Home = ({getChosenChar}) => {
+	const data = useContext(contextdata);
 	return (
 		<>
 		<div className="container scr">
@@ -35,15 +11,24 @@ export const Home = () => {
 			<div className="overflow-auto">
 				<div className="d-flex">
 			{
-				people!=null?	
-				people.map((p,index)=>(
+				data.people!=null?	
+				data.people.map((p,index)=>(
 					<div key={index}>						
 							<div className="card" >
-							<img src={p.url} class="card-img-top" alt="..."/>
+							<img src={p.url} className="card-img-top" alt="..."/>
 							<div className="card-body">
 							<h5 className="card-title">{p.name}</h5>
-							<p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							<a href="#" class="btn btn-primary">Learn More!</a>
+							<p ><b >Gender:</b> <>{p.gender}</></p>
+							<p ><b >Hair Color:</b> <>{p.hair_color}</></p>
+							<p ><b >Eye Color:</b> <>{p.eye_color}</></p>
+							<div className="flex-container">
+							<Link to={"/character/" + index}>
+							<a href="#" className="btn btn-primary">Learn More!</a>
+							</Link>
+							<a className="">
+								<i className="far fa-heart heart" onClick={()=>getChosenChar(p)}></i>
+							</a>
+							</div>
 							</div>
 					 		</div>
 					</div>		
@@ -57,17 +42,20 @@ export const Home = () => {
 			<div className="overflow-auto">
 				<div className="d-flex">
 			{
-				planets!=null?	
-				planets.map((p,index)=>(
+				data.planets!=null?	
+				data.planets.map((p,index)=>(
 					<div key={index}>						
 							<div className="card" >
-							<img src={p.url} class="card-img-top" alt="..."/>
+							<img src={p.url} className="card-img-top" alt="..."/>
 							<div className="card-body">
 							<h5 className="card-title">{p.name}</h5>
-							<p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							<div className="d-flex space-between">
-							<a href="#" class="btn btn-primary">Learn More!</a>
-							<a><i className="fa-solid fa-heart"></i></a>
+							<p ><b >Population:</b> <>{p.population}</></p>
+							<p ><b >Terrain:</b> <>{p.terrain}</></p>
+							<div className="flex-container">
+							<Link to={"/planet/" + index}>
+							<a href="#" className="btn btn-primary">Learn More!</a>
+							</Link>
+							<a className=""><i className="far fa-heart heart" onClick={()=>alert("dasds")}></i></a>
 							</div>
 							</div>
 					 		</div>

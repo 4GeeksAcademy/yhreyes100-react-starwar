@@ -1,0 +1,14 @@
+.cardtemplete{
+    width: 58rem;
+    margin-top: 25px;
+    margin-left: 200px;
+    justify-content: center;
+}
+.imgchar{
+    background-color: grey;
+    width: 1000px;
+}
+.desc{
+    width: 600px;
+    text-align: center;
+}

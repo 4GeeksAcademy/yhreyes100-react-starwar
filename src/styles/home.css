@@ -20,3 +20,27 @@ h1{
     color: red;
     margin-left: 25px;
 }
+i{
+    font-size: 18px;
+}
+.flex-container {
+    display: flex ;
+    justify-content: space-between;
+  }
+.heart{
+    font-size: 28px;
+}
+.imglogo{
+    width: 100px;
+    height: 50px;
+}
+.chosencounter{
+    border: 1px solid #2ECC71;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #2ECC71;
+}
+.btn-menu{
+    width: 150px;
+}
