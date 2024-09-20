@@ -29,17 +29,14 @@ const layout = () => {
 		return temp;
 	}
 	useEffect(()=>{
-		chosenChar.map((p)=>{
-			console.log(p);
-		})
-	},[chosenChar])
+		console.log(counter)
+	},[counter])
 	function getChosenChar(character){
 		if(itsOnList(character,chosenChar)==null){
 			setChosenChar([...chosenChar, character]);
 		}
 		else{
 					const index = itsOnList(character,chosenChar);
-					console.log(index);
 					const newChosen = [
 						...chosenChar.slice(0, parseInt(index)), 
 						...chosenChar.slice( parseInt(index) + 1) 
@@ -69,7 +66,7 @@ const layout = () => {
 	},[]);
 	return (
 		<div>
-			<contextdata.Provider value={{"people":people,"planets":planets,"chosenChar":chosenChar}}>
+			<contextdata.Provider value={{"people":people,"planets":planets,"chosenChar":chosenChar }}>
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar getChosenChar={getChosenChar}/>
