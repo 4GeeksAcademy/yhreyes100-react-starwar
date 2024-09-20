@@ -19,8 +19,8 @@ const layout = () => {
 	const apiUrl="https://swapi.dev/api/";
 	const [people,setPeople]=useState([]);
 	const [planets,setPlanets]=useState([]);
-	const [chosenChar,setChosenChar]= useState([]);
 	const [chosen,setChosen]= useState([]);
+
 	function itsOnList(obj,usestatearray){
 		var temp = null;
 		usestatearray.map((p,index)=>{
@@ -70,7 +70,7 @@ const layout = () => {
 				<ScrollToTop>
 					<Navbar getChosen={getChosen}/>
 					<Routes>
-						<Route path="/" element={<Home getChosen={getChosen}/>} />
+						<Route path="/" element={<Home getChosen={getChosen} itsOnList={itsOnList}/>} />
 						<Route path="/character/:theid" element={<Character />} />
 						<Route path="/planet/:theid" element={<Planets />} />
 						<Route path="*" element={<h1>Not found!</h1>} />
