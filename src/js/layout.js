@@ -20,6 +20,7 @@ const layout = () => {
 	const [people,setPeople]=useState([]);
 	const [planets,setPlanets]=useState([]);
 	const [chosenChar,setChosenChar]= useState([]);
+	const [chosen,setChosen]= useState([]);
 	function itsOnList(obj,usestatearray){
 		var temp = null;
 		usestatearray.map((p,index)=>{
@@ -28,22 +29,20 @@ const layout = () => {
 		})
 		return temp;
 	}
-	useEffect(()=>{
-		console.log(counter)
-	},[counter])
-	function getChosenChar(character){
-		if(itsOnList(character,chosenChar)==null){
-			setChosenChar([...chosenChar, character]);
+	function getChosen(character){
+		if(itsOnList(character,chosen)==null){
+			setChosen([...chosen, character]);
 		}
 		else{
-					const index = itsOnList(character,chosenChar);
+					const index = itsOnList(character,chosen);
 					const newChosen = [
-						...chosenChar.slice(0, parseInt(index)), 
-						...chosenChar.slice( parseInt(index) + 1) 
+						...chosen.slice(0, parseInt(index)), 
+						...chosen.slice( parseInt(index) + 1) 
 					];
-					setChosenChar(newChosen); 
+					setChosen(newChosen); 
 		}
 	} 
+
 	useEffect(()=>{
 		async function getPeople(){
 			await fetch(apiUrl+"people/")
@@ -66,12 +65,12 @@ const layout = () => {
 	},[]);
 	return (
 		<div>
-			<contextdata.Provider value={{"people":people,"planets":planets,"chosenChar":chosenChar }}>
+			<contextdata.Provider value={{"people":people,"planets":planets,"chosen":chosen }}>
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
-					<Navbar getChosenChar={getChosenChar}/>
+					<Navbar getChosen={getChosen}/>
 					<Routes>
-						<Route path="/" element={<Home getChosenChar={getChosenChar} />} />
+						<Route path="/" element={<Home getChosen={getChosen}/>} />
 						<Route path="/character/:theid" element={<Character />} />
 						<Route path="/planet/:theid" element={<Planets />} />
 						<Route path="*" element={<h1>Not found!</h1>} />

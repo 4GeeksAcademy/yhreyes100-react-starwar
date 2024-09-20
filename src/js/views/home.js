@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import "../../styles/home.css";
 import {contextdata} from "../../js/layout";
-export const Home = ({getChosenChar}) => {
+export const Home = ({getChosen}) => {
 	const data = useContext(contextdata);
 	return (
 		<>
@@ -26,7 +26,7 @@ export const Home = ({getChosenChar}) => {
 							<a href="#" className="btn btn-primary">Learn More!</a>
 							</Link>
 							<a className="">
-								<i className="far fa-heart heart" onClick={()=>getChosenChar(p)}></i>
+								<i className="far fa-heart heart" onClick={()=>getChosen(p)}></i>
 							</a>
 							</div>
 							</div>
@@ -55,7 +55,7 @@ export const Home = ({getChosenChar}) => {
 							<Link to={"/planet/" + index}>
 							<a href="#" className="btn btn-primary">Learn More!</a>
 							</Link>
-							<a className=""><i className="far fa-heart heart" onClick={()=>alert("dasds")}></i></a>
+							<a className=""><i className="far fa-heart heart" onClick={()=>getChosen(p)}></i></a>
 							</div>
 							</div>
 					 		</div>
