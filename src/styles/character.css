@@ -11,4 +11,10 @@
 .desc{
     width: 600px;
     text-align: center;
+    color: grey;
+    font-weight: bold;
+}
+c{
+    color: grey;
+    font-weight: bold;
 }

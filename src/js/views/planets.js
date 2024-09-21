@@ -30,19 +30,38 @@ export const Planets = () => {
             </div>
             <div className="card-body">
                 <h5 className="card-title">{char.name}</h5>
-                <div className="flex-container">
-                <p className="card-text">Rotation Period: {char.rotation_period}</p>
-                <p className="card-text">Orbital Period: {char.orbital_period}</p>
-                <p className="card-text">Diameter: {char.diameter}</p>
-                <p className="card-text">Climate: {char.climate}</p>
-                <p className="card-text">Gravity: {char.gravity}</p>
-                </div>
-                <div className="flex-container">
-                <p className="card-text">Terrain: {char.terrain}</p>
-                <p className="card-text">Surface Water: {char.surface_water}</p>
-                <p className="card-text">Population: {char.population}</p>
-                <p className="card-text">created: {char.created}</p>
-                </div>
+                <div className="container">
+                <div className="row">
+                        <div className="col-3">
+                        <b>Climate: </b><c>{char.climate}</c> 
+                        </div>
+                        <div className="col-3">
+                        <b>Rotation Period: </b><c>{char.rotation_period}</c> 
+                        </div>
+                        <div className="col-3">
+                        <b>Orbital Period: </b><c>{char.orbital_period}</c> 
+                        </div>
+                        <div className="col-3">
+                        <b>Diameter: </b><c>{char.diameter}</c> 
+                        </div>
+                </div>  
+                <div className="row">
+                        <div className="col-3">
+                        <b>Gravity: </b><c>{char.gravity}</c> 
+                        </div>
+                        <div className="col-3">
+                        <b>Terrain: </b><c>{char.terrain}</c> 
+                        </div>
+                        <div className="col-3">
+                        <b>Surface Water: </b><c>{char.surface_water}</c> 
+                        </div>
+                        <div className="col-3">
+                        <b>Population: </b><c> {char.population}</c> 
+                        </div>
+                </div> 
+                </div> 
+                
+               
                 <Link to="/">
 				<span className="btn btn-primary btn-lg" href="#" role="button">
 					Go Back

@@ -18,9 +18,9 @@ export const Home = ({getChosen,itsOnList}) => {
 							<img src={p.url} className="card-img-top" alt="..."/>
 							<div className="card-body">
 							<h5 className="card-title">{p.name}</h5>
-							<p ><b >Gender:</b> <>{p.gender}</></p>
-							<p ><b >Hair Color:</b> <>{p.hair_color}</></p>
-							<p ><b >Eye Color:</b> <>{p.eye_color}</></p>
+							<p ><b >Gender:</b> <c>{p.gender}</c></p>
+							<p ><b >Hair Color:</b> <c>{p.hair_color}</c></p>
+							<p ><b >Eye Color:</b> <c>{p.eye_color}</c></p>
 							<div className="flex-container">
 							<Link to={"/character/" + index}>
 							<a href="#" className="btn btn-primary">Learn More!</a>
@@ -52,8 +52,8 @@ export const Home = ({getChosen,itsOnList}) => {
 							<img src={p.url} className="card-img-top" alt="..."/>
 							<div className="card-body">
 							<h5 className="card-title">{p.name}</h5>
-							<p ><b >Population:</b> <>{p.population}</></p>
-							<p ><b >Terrain:</b> <>{p.terrain}</></p>
+							<p ><b >Population:</b> <c>{p.population}</c></p>
+							<p ><b >Terrain:</b> <c>{p.terrain}</c></p>
 							<div className="flex-container">
 							<Link to={"/planet/" + index}>
 							<a href="#" className="btn btn-primary">Learn More!</a>

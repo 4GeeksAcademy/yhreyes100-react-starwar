@@ -30,18 +30,35 @@ export const Character = () => {
             </div>
             <div className="card-body">
                 <h5 className="card-title">{char.name}</h5>
-                <div className="flex-container">
-                <p className="card-text">Height: {char.height}</p>
-                <p className="card-text">Mass: {char.mass}</p>
-                <p className="card-text">Heir Color: {char.hair_color}</p>
-                <p className="card-text">Skin Color: {char.skin_color}</p>
-                <p className="card-text">Eye Color: {char.eye_color}</p>
-                </div>
-                <div className="flex-container">
-                <p className="card-text">Birth Year: {char.birth_year}</p>
-                <p className="card-text">Gender: {char.gender}</p>
-                <p className="card-text">Homeworld: {char.homeworld}</p>
-                <p className="card-text">created: {char.created}</p>
+                <div className="container">
+                <div className="row">
+                        <div className="col-3">
+                        <b>Height: </b><c>{char.height}</c> 
+                        </div>
+                        <div className="col-3">
+                        <b>Heir Color: </b><c>{char.hair_color}</c> 
+                        </div>
+                        <div className="col-3">
+                        <b>Mass: </b><c>{char.mass}</c> 
+                        </div>
+                        <div className="col-3">
+                        <b>Skin Color: </b><c>{char.skin_color}</c> 
+                        </div>
+                </div>  
+                <div className="row">
+                        <div className="col-3">
+                        <b>Eye Color: </b><c>{char.eye_color}</c> 
+                        </div>
+                        <div className="col-3">
+                        <b>Birth Year: </b><c> {char.birth_year}</c> 
+                        </div>
+                        <div className="col-3">
+                        <b>Gender: </b><c>{char.gender}</c> 
+                        </div>
+                        <div className="col-3">
+                       
+                        </div>
+                </div>    
                 </div>
                 <Link to="/">
 				<span className="btn btn-primary btn-lg" href="#" role="button">
