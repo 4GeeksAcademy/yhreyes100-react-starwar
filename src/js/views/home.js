@@ -15,7 +15,7 @@ export const Home = ({getChosen,itsOnList}) => {
 				data.people.map((p,index)=>(
 					<div key={index}>						
 							<div className="card" >
-							<img src={p.url} className="card-img-top" alt="..."/>
+							<img src={"https://starwars-visualguide.com/assets/img/characters/"+parseInt(index+1)+".jpg"} className="card-img-top" alt="..."/>
 							<div className="card-body">
 							<h5 className="card-title">{p.name}</h5>
 							<p ><b >Gender:</b> <c>{p.gender}</c></p>
@@ -49,7 +49,7 @@ export const Home = ({getChosen,itsOnList}) => {
 				data.planets.map((p,index)=>(
 					<div key={index}>						
 							<div className="card" >
-							<img src={p.url} className="card-img-top" alt="..."/>
+							<img src={parseInt(index)==0?"https://starwars-visualguide.com/assets/img/planets/7.jpg":"https://starwars-visualguide.com/assets/img/planets/"+parseInt(index+1)+".jpg"} className="card-img-top" alt="..."/>
 							<div className="card-body">
 							<h5 className="card-title">{p.name}</h5>
 							<p ><b >Population:</b> <c>{p.population}</c></p>
