@@ -25,7 +25,7 @@ export const Planets = () => {
 		<div className="container">
             <div className="card cardtemplete">
              <div className="flex-container">   
-            <img  src={parseInt(params.theid)==0?"https://starwars-visualguide.com/assets/img/planets/7.jpg":"https://starwars-visualguide.com/assets/img/planets/"+(parseInt(params.theid)+1)+".jpg"} className="imgchar" alt="..."/>
+            <img  src={parseInt(params.theid)==0?"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4BiUFFwPgZCQAbgYL8iAynisoXkWR_OT2oo6OE2vYZihU_ZIwBGuA_5U2r0_4UWVxV-Y&usqp=CAU":"https://starwars-visualguide.com/assets/img/planets/"+(parseInt(params.theid)+1)+".jpg"} className="imgchar" alt="..."/>
             <p className="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
             <div className="card-body">

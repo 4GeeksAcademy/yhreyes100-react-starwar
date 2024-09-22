@@ -49,7 +49,7 @@ export const Home = ({getChosen,itsOnList}) => {
 				data.planets.map((p,index)=>(
 					<div key={index}>						
 							<div className="card" >
-							<img src={parseInt(index)==0?"https://starwars-visualguide.com/assets/img/planets/7.jpg":"https://starwars-visualguide.com/assets/img/planets/"+parseInt(index+1)+".jpg"} className="card-img-top" alt="..."/>
+							<img src={parseInt(index)==0?"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4BiUFFwPgZCQAbgYL8iAynisoXkWR_OT2oo6OE2vYZihU_ZIwBGuA_5U2r0_4UWVxV-Y&usqp=CAU":"https://starwars-visualguide.com/assets/img/planets/"+parseInt(index+1)+".jpg"} className="card-img-top" alt="..."/>
 							<div className="card-body">
 							<h5 className="card-title">{p.name}</h5>
 							<p ><b >Population:</b> <c>{p.population}</c></p>
