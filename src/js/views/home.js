@@ -53,7 +53,7 @@ export const Home = ({getChosen,itsOnList}) => {
 							<div className="card-body">
 							<h5 className="card-title">{p.name}</h5>
 							<p ><b >Population:</b> <c>{p.population}</c></p>
-							<p ><b >Terrain:</b> <c>{p.terrain}</c></p>
+							<p ><b >Climate:</b> <c>{p.climate}</c></p>
 							<div className="flex-container">
 							<Link to={"/planet/" + index}>
 							<a href="#" className="btn btn-primary">Learn More!</a>
